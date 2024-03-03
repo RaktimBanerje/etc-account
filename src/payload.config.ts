@@ -9,8 +9,9 @@ import { buildConfig } from 'payload/config'
 import Users from './collections/Users'
 import College from './collections/College'
 import Course from './collections/Course'
-import Admission from './collections/Admission'
 import { Media } from './collections/Media'
+import Payment from './collections/Payment'
+import Student from './collections/Student'
 
 export default buildConfig({
   admin: {
@@ -18,7 +19,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Media, Users, College, Course, Admission],
+  collections: [Media, Users, College, Course, Student, Payment],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types'
 
-const Admission: CollectionConfig = {
-  slug: 'admissions',
+const Student: CollectionConfig = {
+  slug: 'students',
   admin: {
     useAsTitle: 'name',
   },
@@ -154,4 +154,4 @@ const Admission: CollectionConfig = {
   timestamps: true,
 }
 
-export default Admission
+export default Student
