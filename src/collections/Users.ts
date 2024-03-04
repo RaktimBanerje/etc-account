@@ -14,7 +14,7 @@ const Users: CollectionConfig = {
     {
       name: 'roles',
       type: 'select',
-      hasMany: true,
+      hasMany: false,
       options: [
         {
           label: 'Admin',
@@ -30,6 +30,16 @@ const Users: CollectionConfig = {
         },
       ],
     },
+    {
+      name: 'college',
+      type: 'relationship', // required
+      relationTo: 'colleges', // required
+      hasMany: false,
+      admin: {
+        condition: (data) => data.roles === 'counsellor',
+      },
+      required: true,
+    }
   ],
   timestamps: true,
 }

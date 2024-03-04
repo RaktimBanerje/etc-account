@@ -12,11 +12,17 @@ import Course from './collections/Course'
 import { Media } from './collections/Media'
 import Payment from './collections/Payment'
 import Student from './collections/Student'
+import Logo from './graphics/Logo'
 
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
+    components: {
+      graphics: {
+        Logo
+      }
+    }
   },
   editor: slateEditor({}),
   collections: [Media, Users, College, Course, Student, Payment],
